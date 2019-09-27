@@ -1,5 +1,5 @@
 <template>
-    <router-link class="" tag="div" :to="item.link" router-link-active>
+    <router-link class="m-3" tag="div" :to="item.link" router-link-active>
       {{item.text}}
     </router-link>
 </template>
