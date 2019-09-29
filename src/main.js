@@ -5,7 +5,9 @@ import store from './store'
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
 import "../style/global.css"
-// import "../style/fontawesome/css/all.css"
+import vSelect from 'vue-select'
+
+Vue.component('v-select', vSelect)
 
 Vue.config.productionTip = false
 
