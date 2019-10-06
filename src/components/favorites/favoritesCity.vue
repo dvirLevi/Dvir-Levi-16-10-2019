@@ -40,7 +40,8 @@
         this.byCity = byCity[0];
       },
       openFavoritInMaim(){
-        this.$store.dispatch('initalCity', this.city.LocalizedName);   
+        // this.$store.dispatch('initalCity', this.city.LocalizedName);   
+        this.$store.commit('pushCityName', this.city.LocalizedName)
         this.$router.push('/');
 
       }

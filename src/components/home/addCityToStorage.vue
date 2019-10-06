@@ -7,11 +7,11 @@
       <div class="w-100 center-all">
         <div class="center-all box p-2" @click="addToLocalStorage" v-if="!ifCityInStorage">
           <i class="fas fa-heart"></i>
-          <p class="m-2">Add city to favorites</p>
+          <p class="m-2">Add to favorites</p>
         </div>
         <div class="center-all box p-2" @click="deleteFormLocalStorage" v-else>
           <i class="fas fa-times"></i>
-          <p class="m-2">Delete city from favorites</p>
+          <p class="m-2">deleted from favorites</p>
         </div>
       </div>
     </div>
@@ -75,7 +75,7 @@
         this.$store.commit('deleteFormLocalStorage', this.cityCompleteObj);
         Swal.fire({
           type: 'success',
-          text: 'delete form favourites!',
+          text: 'deleted from favorites!',
           timer: 1500
         });
       }

@@ -1,7 +1,6 @@
 <template>
-  <div class="row">
+  <div class="row mt-5">
     <div class="col">
-      <!-- <v-select :options="cityComplete" label="LocalizedName" :clearable="false" v-model="city" :value="city"></v-select> -->
       <div class="center-all w-100">
         <i class="fas fa-search"></i>
         <div class="wrap-input">
@@ -30,14 +29,11 @@
     props: {},
     data() {
       return {
-        // city: "",
         ifShowOptions: false,
       }
     },
-     mounted() {
-      // let city = await this.$store.dispatch('getAutoComplete', this.city.name);
-      // this.$store.dispatch('getDaysOfDaily', city[0].Key);
-       this.$store.dispatch('initalCity', this.city.name);
+    mounted() {
+      this.$store.dispatch('initalCity', this.city.name);
     },
     computed: {
       city() {
@@ -53,14 +49,10 @@
     },
     methods: {
       selectCity(item) {
-        // this.city.name = item.LocalizedName;
         this.ifShowOptions = false;
-        // this.$store.dispatch('getAutoComplete', this.city.name);
-        // this.$store.dispatch('getDaysOfDaily', item.Key);
         this.$store.dispatch('initalCity', item.LocalizedName);
       },
       autoComplete() {
-        console.log(this.city.name)
         this.ifShowOptions = true;
         this.$store.dispatch('getAutoComplete', this.city.name);
       }
@@ -74,7 +66,6 @@
     --border-color: rgb(184, 184, 184);
 
   }
-
   .wrap-input {
     width: 20%;
     position: relative;

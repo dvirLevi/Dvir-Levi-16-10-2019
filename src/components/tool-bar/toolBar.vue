@@ -1,43 +1,34 @@
 <template>
-  <div class="row">
+  <div class="row part-shulders">
     <div class="col">
       <div class="center-all-between">
         <div class="center-all">
-          <img alt="logo" src="@/assets/logo.png">
+          <img class="m-2" alt="logo" src="@/assets/logo.png">
           <h1>Weather app</h1>
         </div>
-        <div class="center-all">
-        <categories v-for="item in categories" :item="item" :key="item.id" />
-        </div>
+        <all-menu @openClose="ifMenu = !ifMenu" :class="{menusToolBar: !ifMenu}" />
+        <Hamburger :ifMenu="ifMenu" @openClose="ifMenu = !ifMenu" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import categories from '@/components/tool-bar/categories.vue'
+  import allMenu from '@/components/tool-bar/allMenu.vue'
+  import Hamburger from '@/components/tool-bar/Hamburger.vue'
 
   export default {
     name: 'toolBar',
-    components:{
-      categories
+    components: {
+      allMenu,
+      Hamburger
     },
     props: {
 
     },
     data() {
       return {
-        categories: [{
-            text: 'Home',
-            link: "/",
-            id: 1
-          },
-          {
-            text: 'Favorites',
-            link: "/favorites",
-            id: 2
-          },
-        ]
+        ifMenu: false,
       }
     }
   }
@@ -48,5 +39,19 @@ import categories from '@/components/tool-bar/categories.vue'
   h1 {
     font-family: 'Assistant';
     font-weight: 200
+  }
+
+  @media (max-width: 767.98px) {
+    h1 {
+      font-size: 30px;
+    }
+
+    img {
+      width: 70px;
+    }
+
+    .menusToolBar {
+    display: none;
+  }
   }
 </style>

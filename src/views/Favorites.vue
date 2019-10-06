@@ -1,5 +1,5 @@
 <template>
-  <div class="row center-all" v-if="cityFromStorage">
+  <div class="row center-all mt-5" v-if="cityFromStorage">
     <div class="col-md-2" v-for="city in cityFromStorage" :key="city.Key" >
       <favorites-city :city="city" />
     </div>
