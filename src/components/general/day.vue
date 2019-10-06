@@ -2,7 +2,7 @@
   <div>
       <div class="w-100 center-all box p-3">
         <h3 class="w-100 text-center">{{correntDay}}</h3>
-        <img class="w-50" :src="icon" :title="day.Day.IconPhrase" alt="">
+        <img class="w-75" :src="icon" :title="day.Day.IconPhrase" alt="">
         <p class="w-100 text-center">{{day.Temperature.Minimum.Value}}°{{day.Temperature.Minimum.Unit}} - {{day.Temperature.Maximum.Value}}°{{day.Temperature.Maximum.Unit}}</p>
       </div>
   </div>

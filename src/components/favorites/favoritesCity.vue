@@ -2,7 +2,7 @@
   <div>
     <div class="w-100 center-all box p-3" v-if="byCity" @click="openFavoritInMaim">
       <h3 class="w-100 text-center">{{city.LocalizedName}}</h3>
-      <img class="w-50" :src="icon" :title="byCity.WeatherText" alt="">
+      <img class="w-75" :src="icon" :title="byCity.WeatherText" alt="">
       <p class="w-100 text-center">{{byCity.Temperature.Metric.Value}}°{{byCity.Temperature.Metric.Unit}}</p>
       <p class="w-100 text-center">{{byCity.WeatherText}}</p>
     </div>
