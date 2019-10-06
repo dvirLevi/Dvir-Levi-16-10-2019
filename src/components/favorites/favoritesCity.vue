@@ -59,6 +59,7 @@
 <style scoped>
   .box {
     box-shadow: 1px 1px 2px 0px #d2d2d2;
+    cursor: pointer;
   }
 
   @media (max-width: 767.98px) {}
