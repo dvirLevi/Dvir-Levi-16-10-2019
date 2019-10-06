@@ -1,6 +1,6 @@
 
 let callServer = {
-    url: 'http://dataservice.accuweather.com/',
+    url: 'https://dataservice.accuweather.com/',
     getAutoComplete(cityName){
          return new Promise(async (resolve, reject) => {
             try {
