@@ -4,7 +4,7 @@ let callServer = {
     getAutoComplete(cityName){
          return new Promise(async (resolve, reject) => {
             try {
-                const response = await fetch(this.url + `locations/v1/cities/autocomplete?apikey=87AnaxK8xBv6zhNz5JjUwQMK0n63NeAU&q=${cityName}`);
+                const response = await fetch(this.url + `locations/v1/cities/autocomplete?apikey=FuJbVMKfKVzGweojQJEvCQnALXruTGgf&q=${cityName}`);
                 const json = await response.json();
                 resolve(json)
             } catch (err) {
@@ -15,7 +15,7 @@ let callServer = {
     getDaysOfDaily(citykey){
         return new Promise(async (resolve, reject) => {
            try {
-               const response = await fetch(this.url + `forecasts/v1/daily/5day/${citykey}?apikey=%0987AnaxK8xBv6zhNz5JjUwQMK0n63NeAU&metric=true`);
+               const response = await fetch(this.url + `forecasts/v1/daily/5day/${citykey}?apikey=%09FuJbVMKfKVzGweojQJEvCQnALXruTGgf&metric=true`);
                const json = await response.json();
                resolve(json)
            } catch (err) {
@@ -26,7 +26,7 @@ let callServer = {
    getCurrent(citykey){
     return new Promise(async (resolve, reject) => {
        try {
-           const response = await fetch(this.url + `/currentconditions/v1/${citykey}?apikey=%0987AnaxK8xBv6zhNz5JjUwQMK0n63NeAU`);
+           const response = await fetch(this.url + `/currentconditions/v1/${citykey}?apikey=%09FuJbVMKfKVzGweojQJEvCQnALXruTGgf`);
            const json = await response.json();
            resolve(json)
        } catch (err) {
