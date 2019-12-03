@@ -4,7 +4,7 @@
       <div class="center-all-between">
         <div class="center-all">
           <img class="m-2" alt="logo" src="@/assets/logo.png">
-          <h1>Weather app app</h1>
+          <h1>Weather app</h1>
         </div>
         <all-menu @openClose="ifMenu = !ifMenu" :class="{menusToolBar: !ifMenu}" />
         <Hamburger :ifMenu="ifMenu" @openClose="ifMenu = !ifMenu" />
